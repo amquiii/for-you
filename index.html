@@ -5,63 +5,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Will You Be My Valentine? 💗</title>
+    <title>Will You Be My Date? 💗</title>
 
-    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <div class="container">
 
-    
-        <!-- FIRST SCREEN: Valentine Question -->
+        <h1 id="mainTitle" class="main-title">
+            🫣
+        </h1>
+
+        <!-- SCREEN 1: VALENTINE QUESTION -->
         <section id="question" class="screen">
 
             <img
-              src="images/mocha-bear-hearts.gif"
-              alt="Bear animation"
-              class="bear-gif"
->
+                src="images/mocha-bear-hearts.gif"
+                alt="Cute bear"
+                class="bear-gif"
             >
 
             <p class="question-text">
-                Will you be my Valentine?
+                Will you be my Date?
             </p>
 
             <div class="buttons">
-
-                <button id="yesBtn">
-                    Yes
-                </button>
-
-                <button id="noBtn">
-                    Surely not?
-                </button>
-
+                <button id="yesBtn">Yes</button>
+                <button id="noBtn">Surely not?</button>
             </div>
 
         </section>
 
-        <!-- SECOND SCREEN: Happy Ending -->
+        <!-- SCREEN 2: HAPPY ENDING + CALENDAR -->
         <section id="result" class="screen" hidden>
 
             <img
-             src="images/heart-milk-and-mocha-bear.gif"
-             alt="Happy bear animation"
-            class="bear-gif"
->
+                src="images/heart-milk-and-mocha-bear.gif"
+                alt="Happy bears"
+                class="bear-gif"
+            >
 
             <h2 class="result-text">
-                Ok yay!!!
+                Ok yay!!! 💗
             </h2>
+
+            <p class="date-question">
+                Now, when are you free for our date? 🥹
+            </p>
+
+            <form id="dateForm" class="date-form">
+
+                <label for="dateInput">
+                    Pick your available date 💕
+                </label>
+
+                <input
+                    type="date"
+                    id="dateInput"
+                    name="date"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Submit Date 💌
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- SCREEN 3: DATE RECEIPT -->
+        <section id="receiptScreen" class="screen" hidden>
+
+            <div class="receipt">
+
+                <div class="receipt-header">
+                    ♡ DATE RECEIPT ♡
+                </div>
+
+                <h2 class="receipt-title">
+                    It's a date! 💗
+                </h2>
+
+                <p class="receipt-subtitle">
+                    DATE IS SET!
+                </p>
+
+                <div class="receipt-divider"></div>
+
+                <p class="receipt-label">
+                    OUR SPECIAL DATE
+                </p>
+
+                <h3 id="chosenDate"></h3>
+
+                <div class="receipt-divider"></div>
+
+                <p class="receipt-message">
+                    Can't wait to see you! 💕
+                </p>
+
+                <p class="receipt-footer">
+                    💌
+                </p>
+
+            </div>
+
+            <div class="receipt-actions">
+                <button id="changeDateBtn" type="button">
+                    Change Date
+                </button>
+
+                <button id="printBtn" type="button">
+                    Save / Print Receipt
+                </button>
+            </div>
 
         </section>
 
     </div>
 
-    <!-- JavaScript File -->
     <script src="script.js"></script>
 
 </body>

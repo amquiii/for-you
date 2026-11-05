@@ -1,7 +1,5 @@
 
-/* =========================
-   GLOBAL STYLING
-========================= */
+/* GLOBAL STYLING */
 
 * {
     margin: 0;
@@ -11,26 +9,19 @@
 
 body {
     min-height: 100vh;
-    background-color: white;
+    background: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
-
 .container {
-    width: 100%;
     max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 15px;
+    margin: auto;
+    padding: 30px 15px 70px;
 }
 
-/* =========================
-   PINK OUTLINED HEADING
-========================= */
+/* MAIN TITLE */
 
 .main-title {
     font-size: clamp(28px, 5vw, 45px);
@@ -43,9 +34,7 @@ body {
     margin-bottom: 60px;
 }
 
-/* =========================
-   QUESTION AND RESULT
-========================= */
+/* SCREENS */
 
 .screen {
     display: flex;
@@ -58,9 +47,7 @@ body {
     display: none !important;
 }
 
-/* =========================
-   BEAR ANIMATION
-========================= */
+/* BEAR GIFS */
 
 .bear-gif {
     width: 140px;
@@ -69,19 +56,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================
-   QUESTION TEXT
-========================= */
+/* ORIGINAL QUESTION */
 
 .question-text {
     font-size: 21px;
     color: #222;
     margin-bottom: 12px;
 }
-
-/* =========================
-   BUTTON CONTAINER
-========================= */
 
 .buttons {
     display: flex;
@@ -91,10 +72,6 @@ body {
     gap: 10px;
 }
 
-/* =========================
-   GENERAL BUTTON STYLES
-========================= */
-
 button {
     border: none;
     cursor: pointer;
@@ -103,56 +80,202 @@ button {
     transition: all 0.3s ease;
 }
 
-/* =========================
-   YES BUTTON
-========================= */
-
 #yesBtn {
-    background-color: #2fa34b;
+    background: #2fa34b;
     color: white;
     font-size: 24px;
     padding: 16px 28px;
     border-radius: 2px;
 }
 
-#yesBtn:hover {
-    background-color: #25883d;
-}
-
-/* =========================
-   NO BUTTON
-========================= */
-
 #noBtn {
-    background-color: #a71e2b;
+    background: #a71e2b;
     color: white;
     font-size: 12px;
     padding: 7px 10px;
     border-radius: 2px;
 }
 
-#noBtn:hover {
-    background-color: #861722;
-}
-
-/* =========================
-   SECOND SCREEN
-========================= */
+/* HAPPY ENDING */
 
 .result-text {
-    font-size: 22px;
-    color: #222;
-    margin-top: 5px;
+    font-size: 27px;
+    color: #e785a9;
+    margin: 10px 0 20px;
 }
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
+.date-question {
+    font-size: 19px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* CALENDAR FORM */
+
+.date-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 320px;
+    padding: 22px;
+    background: #fff4f8;
+    border-radius: 20px;
+    border: 2px solid #ffd1e1;
+}
+
+.date-form label {
+    color: #d35e89;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#dateInput {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-family: inherit;
+    border: 2px solid #e9a8c0;
+    border-radius: 10px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+}
+
+#dateInput:focus {
+    outline: 2px solid #e785a9;
+    outline-offset: 2px;
+}
+
+#submitBtn {
+    width: 100%;
+    padding: 14px;
+    background: #e785a9;
+    color: white;
+    font-size: 17px;
+    border-radius: 12px;
+}
+
+#submitBtn:hover {
+    background: #d66891;
+}
+
+/* RECEIPT */
+
+.receipt {
+    width: 100%;
+    max-width: 360px;
+    padding: 35px 25px;
+    background: #fffafc;
+    border: 2px dashed #e9a8c0;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(219, 97, 139, 0.15);
+}
+
+.receipt-header {
+    color: #ca7693;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.receipt-title {
+    color: #e36b99;
+    font-size: 31px;
+    margin: 25px 0 8px;
+}
+
+.receipt-subtitle {
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.receipt-divider {
+    border-top: 2px dashed #ebbdce;
+    margin: 25px 0;
+}
+
+.receipt-label {
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+#chosenDate {
+    color: #222;
+    font-size: 24px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.receipt-message {
+    color: #df769c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.receipt-footer {
+    color: #999;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+/* RECEIPT BUTTONS */
+
+.receipt-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.receipt-actions button {
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#changeDateBtn {
+    background: #f1e5e9;
+    color: #9e5271;
+}
+
+#printBtn {
+    background: #e785a9;
+    color: white;
+}
+
+/* POP-UP ANIMATION */
+
+.pop-in {
+    animation: popIn 0.55s ease both;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+
+    70% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE */
 
 @media (max-width: 600px) {
-
     .container {
-        padding: 25px 12px;
+        padding: 25px 12px 60px;
     }
 
     .main-title {
@@ -169,7 +292,33 @@ button {
         font-size: 18px;
     }
 
-    #yesBtn {
-        font-size: 22px;
+    .date-question {
+        font-size: 17px;
+    }
+
+    .receipt-title {
+        font-size: 28px;
+    }
+}
+
+/* PRINT ONLY THE RECEIPT */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .main-title,
+    .receipt-actions {
+        display: none !important;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .receipt {
+        box-shadow: none;
+        margin: 20px auto;
     }
 }
